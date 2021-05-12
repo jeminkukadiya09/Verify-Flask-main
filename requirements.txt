@@ -19,3 +19,4 @@ dnspython
 datetime
 pytz
 python-Levenshtein
+schedule
