@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varifie</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+
+
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <div class='navi' style="font-size: 1.5em;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/logo.svg')}}" height="50px" width="100px"
+                    class="d-inline-block align-top" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse px-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Products<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Use Cases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Integration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Company</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-right">
+                    <li>
+                        <div class="btn-nav"><a class="btn btn-danger btn-small navbar-btn ext-btn" href=#>Try Now!</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn ext-btn"
+                                href="#">Contact</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+    <!-- NavBar Done -->
+
+    <div class="prt1">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 tptxt">
+                <b>
+                   <h1> Reliable Identity Management Solutions</h1> <br /> <h2>Advanced Tech enriched with<br/> AI and Blockchain</h2> <br />
+                </b>
+                <h3>Solve your identity Woes<br/> with a tested and Secured Tech</h3> <br /> <br /> <br /> 
+                <span style="display: block;"><button class="btn btn-success btn-lg" value="/cam" onclick="window.location.href=this.value">Get Varified</button></span>
+
+               <!-- <span style="display: block; font-size:2em ; color: pink;">Lorem Ipsum Ipsum Iosum</span> <br />
+                <span style="display: block; font-size:2em ; color: greenyellow;"><b>Lorem Ipsum Lorem Iosum</b></span>-->
+            </div>
+        </div>
+            </div>
+    </div>
+
+
+    <br />
+
+
+
+    <div class="prt2">
+        <span class="p2hd">
+            <h1>One Platform for Multiple Requirements</h1>
+        </span>
+    </div>
+    <div class="container-fluid">
+    <div class="row text-center cmps" style="margin-top: 5%;">
+        <div class="col-lg-3 col-xs-12 mb-3">
+            <div class="col-xs-12" style="height: 100%;">
+                <img src="{{ url_for('static', filename='img/build.png') }}" class="itm" />
+                <br />
+                <span class="p2sm">
+                    Build
+                </span>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-xs-12 mb-3">
+
+            <div class="col-xs-12" style="height: 100%;">
+                <img src="{{ url_for('static', filename='img/proof.png')}}" class="itm" />
+                <br />
+                <span class="p2sm">
+                    Proof
+                </span>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-xs-12 mb-3">
+
+            <div class="col-xs-12" style="height: 100%;">
+                <img src="{{ url_for('static', filename='img/monitor.png')}}" class="itm" />
+                <br />
+                <span class="p2sm">
+                    Monitor
+                </span>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-xs-12 mb-3">
+
+            <div class="col-xs-12" style="height: 100%;">
+                <img src="{{ url_for('static', filename='img/reuse.png')}}" class="itm" />
+                <br />
+                <span class="p2sm">
+                    Re-Use
+                </span>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <span class="p2hd cmps" style="margin-top: 2em; font-size: 2em;">
+        Weed out Impostors with Varifie's Advanced tech armed with AI and Machine Learning
+    </span>
+
+
+    <!--Prt3-->
+
+    <div class="prt3">
+        <div class="container-fluid">
+        <div class="row text-center p3im" style="margin-top: 5%;">
+
+            <div class="col-sm-4 col-xs-12 mb-3">
+                <img src="{{ url_for('static', filename='img/digitid.png')}}" class="imgmq">
+            </div>
+
+            <div class="col-sm-4 col-xs-12 mb-3">
+                <img src="{{ url_for('static', filename='img/idverif.png')}}" class="imgmq">
+            </div>
+
+            <div class="col-sm-4 col-xs-12 mb-3">
+                <img src="{{ url_for('static', filename='img/recomp.png')}}" class="imgmq">
+            </div>
+
+        </div>
+    </div>
+
+
+        <span class="p2hd" style="margin-top: 1em; font-size: 1.5em;">
+            Single Click Identity Management Solutions for Multiple requirements<br />
+            <button class="btn btn-primary">Learn More</button>
+        </span>
+
+
+    </div>
+
+
+    <!--Prt4-->
+
+    <div class="prt4">
+        <div class="container-fluid">
+        <div class="row text-center p3im" style="margin-top: 2%;">
+
+            <div class="col-xs-12 col-lg-6 mb-3">
+                <img src="{{ url_for('static', filename='img/hm-0.png')}}" class="imgmq">
+            </div>
+
+            <div class="col-xs-12 col-lg-6 mb-3 text-center" style="text-justify: auto;">
+
+                <span style="color: lightblue; display: block; font-size: 1.5em;">
+                    Identity Frauds Cost stakeholders in Billions
+                </span> <br />
+
+                <div class="prt2">
+                    <span class="p2hd">
+                        <h1>Blockchain, AI and Machine Learning at Your Service</h1>
+                    </span> <br />
+                </div>
+
+                <span style="color: black; display: block; font-size: 1.25em;">
+                    When it comes to crucial decision making Manual Verification can not be trusted. In such cases,
+                    technology comes at rescue. Varifie uses cutting edge tech of both worlds. The AI helps in fraud
+                    prevention while the blockchain tech known for its encryption makes the data super secure and easy
+                    to use.
+
+                </span> <br />
+
+            </div>
+
+        </div>
+</div>
+    </div>
+
+    <div class="prt5">
+        <img src="{{ url_for('static', filename='img/green-bg.png')}}" class="imgmq">
+    </div>
+
+
+    <!--part6-->
+
+
+
+
+    <div class="prt6" style="margin-top: 3%;">
+        <br />
+
+        <div class="prt2">
+            <span class="p2hd" style="color: white; font-size: 3em;">
+                Verticals
+            </span> <br />
+        </div>
+
+        <span class="text-center" style="color: white; display: block; font-size: 1.5em;">
+            Varifie is answer for Multiple Business Problems.
+        </span> <br /> <br />
+    <div class="container-fluid">
+        <div class="row text-center cmps">
+            <div class="col-xs-12 col-md-6 col-xl-3 mb-3">
+                <div class="col-xs-12 cstm">
+                    <img src="{{ url_for('static', filename='img/finance.png')}}" class="itm imgq" />
+                    <br />
+                    <span class="p2sm" style="color: white;">
+                        Financial Institutions
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-xl-3 mb-3">
+                <div class="col-xs-12 cstm">
+                    <img src="{{ url_for('static', filename='img/lending.png')}}" class="itm imgq" />
+                    <br />
+                    <span class="p2sm" style="color: white;">
+                        Lending
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-xl-3 mb-3">
+                <div class="col-xs-12 cstm">
+                    <img src="{{ url_for('static', filename='img/smplc.png')}}" class="itm imgq" />
+                    <br />
+                    <span class="p2sm" style="color: white;">
+                        Sharing+ Marketplace
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-xl-3 mb-3">
+                <div class="col-xs-12 cstm">
+                    <img src="{{ url_for('static', filename='img/travel.png')}}" class="itm imgq" />
+                    <br />
+                    <span class="p2sm" style="color: white;">
+                        Travel
+                    </span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <br /> <br />
+
+    <div class="container-fluid">
+        <div class="row text-center cmps">
+
+            <div class="col-xs-12 col-md-6 mb-3 text-center pad">
+                <div class="col-xs-12 cstm1">
+                    <h2>For Business</h2>
+                    <img src="{{ url_for('static', filename='img/hm1.png')}}" class="imgmq itm" />
+                    <br />
+                    <span class="p2sm" style="text-align: justify; text-justify: distribute;">
+                        No need of archaic, resource consuming and inefficient identification methods. Preventing fraud
+                        can be much more easy than you think. Varifie gives you a solution which is reliable, secure and
+                        most importantly that works.
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 text-center mb-3 pad">
+                <div class="col-xs-12 cstm1">
+                    <h2>For End Users</h2>
+                    <img src="{{ url_for('static', filename='img/hm2.png')}}" class="imgmq itm" />
+                    <br />
+                    <span class="p2sm" style="text-align: justify;text-justify: distribute;">
+                        You can avoid impostors from using your unique identification. The Blockchain tech underneath
+                        the Varifie gives you power to store and use your data in a single click at a place of your
+                        choice.
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+
+
+    <!--Footer-->
+
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+
+                            <ul class="list-unstyled">
+                                <li><a href="#"></a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+
+                            <ul class="list-unstyled">
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Usecases</a></li>
+                                <li><a href="#">Resources</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+
+                            <ul class="list-unstyled">
+                                <li><a href="#">Get Varified</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="{{ url_for('static', filename='img/logowh.svg')}}" height="100px" width="200px">
+                        <br />
+                        <br />
+                        <ul class="social-network social-circle">
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoGithub" title="GitHub"><i class="fa fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-12 copy">
+                        <p class="text-center">&copy; Copyright 2020 - Varifie. All rights reserved.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

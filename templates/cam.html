@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varifie</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cam.css')}}">
+</head>
+
+<body onload="open_cam()">
+
+    <!-- NavBar -->
+    <div class='navi' style="font-size: 1.5em;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/logo.svg')}}"
+                    height="50px" width="100px" class="d-inline-block align-top" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse px-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Products<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Use Cases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Integration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Company</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-right">
+                    <li>
+                        <div class="btn-nav"><a class="btn btn-danger btn-small navbar-btn ext-btn" href=#>Try Now!</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn ext-btn"
+                                href="#">Contact</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+    <!-- NavBar Done -->
+
+    <div class="prt1">
+        <div class="row text-center">
+            <div class="col-md-6 col-xs-12 cambox">
+                <div class="col-xs-12 col-md-10 col-lg-8 boxcnt text-center">
+
+                    <span class="text-center">
+                        <h3>Face Capture</h3>
+                    </span>
+                    <br />
+                    <div class="area text-center">
+                        <video height="100%" width="100%" autoplay id="video"></video>
+                    </div>
+                    <br />
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#captureModal" onclick="capture()">Capture</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+
+    <div class="modal fade" id="captureModal" tabindex="-1" role="dialog" aria-labelledby="CaptureModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Capture</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-10" style="margin: auto;">
+                        <canvas id="canvas" style="overflow:auto"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="open_cam()">Retry</button>
+              <button type="button" class="btn btn-primary" onclick="sendData()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!--Footer-->
+
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+
+                            <ul class="list-unstyled">
+                                <li><a href="#"></a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Jurisdictions</a></li>
+                                <li><a href="#">People</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+
+                            <ul class="list-unstyled">
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">News & Insights</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+
+                            <ul class="list-unstyled">
+                                <li><a href="#">Legal Notice</a></li>
+                                <li><a href="#">Privacy Statement</a></li>
+                                <li><a href="#">Site Disclaimer & cookies Policy</a></li>
+                                <li><a href="#">Terms of Business</a></li>
+                                <li><a href="#">Policy Statements</a></li>
+                                <li><a href="#">eAlerts Signup</a></li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="{{ url_for('static', filename='img/logowh.svg')}}" height="100px"
+                            width="200px">
+                        <br />
+                        <br />
+                        <ul class="social-network social-circle">
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li><a href="#" class="icoYoutube" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-12 copy">
+                        <p class="text-center">&copy; Copyright 2020 - Varifie. All rights reserved.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="{{ url_for('static', filename='js/cam.js') }}"></script>
+
+
+</body>
+
+</html>
