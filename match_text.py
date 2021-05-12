@@ -5,16 +5,11 @@ from fuzzywuzzy import fuzz
 # function to match any general string
 def match_name(text, name):
     name_ratio = fuzz.partial_ratio(name.lower(), text.lower())
-    # EDIT FOR 50% MATCH PROBLEM
-    if name_ratio < 80:
-        if(name.lower() in text.lower()):
-            name_ratio = 100
     return name_ratio
 
 
 # function to match aadhar number
 def match_aadhar_no(text, id_no):
-    print("Started Matching",id_no)
     id_match = ""
     count = 0
     for i in id_no:
@@ -27,9 +22,7 @@ def match_aadhar_no(text, id_no):
             continue
         else:
             return 0
-    print("ID MATCH = ", id_match)
-
-    print("Started Fuzz Matching")
+    # print("ID MATCH = ", id_match)
     if count == 12:
         id_ratio = fuzz.partial_ratio(id_match, text)
         return id_ratio
@@ -66,12 +59,10 @@ def match_passport_id(text, id_no):
 
 # function to pre-process DOB and match it according to the separator
 def match_dob(text, dob, sep):
-
     temp = ''
     count = 0
     date = ['', '', '']
     dob += '/'
-    print("dob =", dob)
     for i in dob:
         # print(i)
         if i.isnumeric():
@@ -85,9 +76,7 @@ def match_dob(text, dob, sep):
                 return 0
         else:
             return 0
-    date_match = date[2] + sep + date[1] + sep + date[0]
-    print("date_match =",date_match)
-    print("Text =",text)
+    date_match = date[0] + sep + date[1] + sep + date[2]
     date_ratio = fuzz.partial_ratio(date_match, text)
     # print(date_ratio)
     return date_ratio
