@@ -55,8 +55,7 @@ pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesserac
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+
 
 ############################################
 # View Routes
