@@ -275,4 +275,4 @@ def check_details():
     return jsonify({"message": "details recieved"})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debuge=True)
